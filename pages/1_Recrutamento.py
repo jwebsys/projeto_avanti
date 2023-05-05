@@ -86,6 +86,8 @@ var_em_acompanhamento = var_recrutados - var_saida_prematura - var_completaram_e
 # TESTES DE HPLC ->  Contar [ava_hplc_data] na tabela Enrolled
 var_testes_hplc = df[df.columns[9]].count()
 
+# SAÍDA PREMATURA RT-PCR -> SAIDA PREMATURA / RECRUTADOS
+var_saida_prematura_rt_pcr = round((var_saida_prematura / var_recrutados) * 100, 2)
 
 ### PÁGINA PRINCIPAL ###
 
@@ -122,6 +124,10 @@ col1, col2, col3 = st.columns([2, 1, 4])
 col1.write('**COMPLETARAM ESTUDO:**')
 col2.info(f"{var_completaram_estudo}")
 
+col1, col2, col3 = st.columns([2, 1, 4])
+
+col1.write('**SAÍDA PREMATURA:**')
+col2.info(f"{var_saida_prematura_rt_pcr}%")
     
 st.markdown("---")
 

@@ -144,9 +144,6 @@ with col3:
     st.write('**GRUPO TRATAMENTO 3:**')
     st.info(f"{var_auxt3}")
 
-with col4:
-    st.write('**SAÍDA PREMATURA:**')
-    st.info(f"{var_saida_prematura_rt_pcr}%")
 
 st.markdown("---")
 
