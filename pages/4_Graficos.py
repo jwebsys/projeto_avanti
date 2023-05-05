@@ -12,6 +12,16 @@ import folium
 from streamlit_folium import st_folium, folium_static
 
 
+def grafico_grupos(df2):
+
+    # 4. Comparação do volume de pedidos por cidade e tipo de tráfego
+    df_aux = df.groupby(['grupo', 'ava_pcr_resultado'])['ava_pcr_resultado'].count()
+
+    fig = px.scatter( df_aux, x='grupo', y='ava_pcr_resultado', color='ava_pcr_resultado' )
+                
+    return fig
+
+
 # --- Criar o dataframe
 df = pd.read_csv('./datasets/dbavanti.csv', sep=';')
 fortaleza = pd.read_csv("./datasets/dados.csv")
@@ -37,6 +47,7 @@ st.set_page_config(
 
 with st.sidebar:
     
+    st.header('Projeto AVANTI - Gráficos')
                
     st.sidebar.markdown( """___""" )
     
@@ -65,10 +76,11 @@ altura_grafico = 250
 ### PÁGINA PRINCIPAL ###
 
 #st.altair_chart(graf1_qtde_resultado, use_container_width=True)
-alt.Chart(tabela2_grupo).mark_bar().encode(
-    x='ano_mes',
-    y='ava_pcr_resultado'
-)
+
+
+#fig = grafico_grupos(df)
+#st.markdown('###### Grupos ######')
+#st.plotly_chart( fig, use_container_width=True)
 
 
 st.markdown("---")
