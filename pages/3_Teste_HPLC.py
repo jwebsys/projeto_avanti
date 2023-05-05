@@ -51,12 +51,15 @@ var_testes_hplc = df[df.columns[9]].count()
 
 with st.container():
     
-    st.header('Projeto AVANTI - Teste HPLC - Quantidade')
-        
+    st.write('**PROJETO AVANTI**')
+    st.write('**Teste HPLC**')
+
+    st.markdown("---")
+            
     col1, col2, col3 = st.columns([1,2,4])
     
     with col1:
-                
+        st.write('**Quantidade**')        
         st.info(f"{var_testes_hplc}")
 
          

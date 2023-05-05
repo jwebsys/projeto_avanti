@@ -35,19 +35,19 @@ st.set_page_config(
 )
 
 
-with st.sidebar:
+# with st.sidebar:
     
             
-    var_Grupo = st.selectbox(
-        "Selecione o Grupo:",
-        options=df['grupo'].unique()
-    )
+    # var_Grupo = st.selectbox(
+        # "Selecione o Grupo:",
+       #  options=df['grupo'].unique()
+   #  )
 
 
 # Tabela Grupo
-tabela2_grupo = df.loc[(
-    df['grupo'] == var_Grupo)
-]
+# tabela2_grupo = df.loc[(
+#     df['grupo'] == var_Grupo)
+# ]
 
 
 
@@ -115,13 +115,15 @@ var_pcr_percentual = (var_pcr_resultado / var_pcr_resultado_all) * 100
 
 ### PÁGINA PRINCIPAL ###
 
+st.write('**PROJETO AVANTI**')
+st.write('**Resultados RT-PCR**')
+
+st.markdown("---")
+
 col1, col2, col3 = st.columns([1.2, .5, .5])
 
 with col1:
-    
-    st.write('**Projeto AVANTI - RESULTADOS RT-PCR LACEN (N/+)**')
-   
-    
+    st.write('**EXEME RT-PCR (N/+)**')
 with col2:
     st.info(f"{var_pcr_resultado_all} / {var_pcr_resultado}")
 

@@ -45,23 +45,23 @@ st.set_page_config(
 )
 
 
-with st.sidebar:
+#with st.sidebar:
     
-    st.header('Projeto AVANTI - Gráficos')
+    #st.header('Projeto AVANTI - Gráficos')
                
-    st.sidebar.markdown( """___""" )
+    #st.sidebar.markdown( """___""" )
     
-    var_Grupo = st.selectbox(
-        "Selecione o Grupo:",
-        options=df['grupo'].unique()
-    )
+    #var_Grupo = st.selectbox(
+        #"Selecione o Grupo:",
+        #options=df['grupo'].unique()
+    #)
 
     
 
 # Tabela Grupo
-tabela2_grupo = df.loc[(
-    df['grupo'] == var_Grupo)
-]
+#tabela2_grupo = df.loc[(
+#    df['grupo'] == var_Grupo)
+#]
 
 
 
@@ -82,6 +82,9 @@ altura_grafico = 250
 #st.markdown('###### Grupos ######')
 #st.plotly_chart( fig, use_container_width=True)
 
+st.write('**PROJETO AVANTI**')
+st.write('**Gráficos**')
 
 st.markdown("---")
+
 

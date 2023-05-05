@@ -34,20 +34,20 @@ st.set_page_config(
 )
 
 
-with st.sidebar:
+#with st.sidebar:
     
             
-    var_Grupo = st.selectbox(
-        "Selecione o Grupo:",
-        options=df['grupo'].unique()
-    )
+    #var_Grupo = st.selectbox(
+        #"Selecione o Grupo:",
+        #options=df['grupo'].unique()
+    #)
 
     
 
 # Tabela Grupo
-tabela2_grupo = df.loc[(
-    df['grupo'] == var_Grupo)
-]
+#tabela2_grupo = df.loc[(
+    #df['grupo'] == var_Grupo)
+#]
 
 
 
@@ -91,43 +91,42 @@ var_saida_prematura_rt_pcr = round((var_saida_prematura / var_recrutados) * 100,
 
 ### PÁGINA PRINCIPAL ###
 
-st.header('Projeto AVANTI - RECRUTAMENTO / ACOMPANHAMENTO')
+st.write('**PROJETO AVANTI**')
+st.write('**Recrutamento / Acompanhamento**')
+
+st.markdown("---")
             
-col1, col2, col3 = st.columns([2, 1, 4])
+col1, col2, col3, col4 = st.columns([2, 1, 1, 4])
 
 col1.write('**SELECIONADOS:**')
 col2.info(f"{var_selecionados}")
 
-
-col1, col2, col3 = st.columns([2, 1, 4])
+col1, col2, col3, col4 = st.columns([2, 1, 1,4])
 
 col1.write('**RECUSADOS:**')
 col2.info(f"{var_recusados}")
 
-col1, col2, col3 = st.columns([2, 1, 4])
+col1, col2, col3, col4 = st.columns([2, 1, 1, 4])
 
 col1.write('**RECRUTADOS:**')
 col2.info(f"{var_recrutados}")
 
-col1, col2, col3 = st.columns([2, 1, 4])
+col1, col2, col3, col4 = st.columns([2, 1, 1, 4])
 
 col1.write('**SAÍDA PREMATURA:**')
 col2.info(f"{var_saida_prematura}")
+col3.info(f"{var_saida_prematura_rt_pcr}%")
 
-col1, col2, col3 = st.columns([2, 1, 4])
+col1, col2, col3, col4 = st.columns([2, 1, 1, 4])
 
 col1.write('**EM ACOMPANHAMENTO:**')
 col2.info(f"{var_em_acompanhamento}")
 
-col1, col2, col3 = st.columns([2, 1, 4])
+col1, col2, col3, col4 = st.columns([2, 1, 1, 4])
 
 col1.write('**COMPLETARAM ESTUDO:**')
 col2.info(f"{var_completaram_estudo}")
 
-col1, col2, col3 = st.columns([2, 1, 4])
-
-col1.write('**SAÍDA PREMATURA:**')
-col2.info(f"{var_saida_prematura_rt_pcr}%")
     
 st.markdown("---")
 
