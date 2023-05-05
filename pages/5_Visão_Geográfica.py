@@ -44,7 +44,7 @@ altura_grafico = 250
 #st.map(fortaleza)
 
 
-st.header('Visão Geográfica - Mapa de Fortaleza')
+st.header('Projeto AVANTI - Visão Geográfica - Mapa de Fortaleza')
 
 fig = px.scatter_mapbox(fortaleza, lat="lat", lon="lon", hover_name='ID',zoom=11)
 
