@@ -95,10 +95,10 @@ st.write('**PROJETO AVANTI**')
 st.write('**Recrutamento / Acompanhamento**')
 
 st.markdown("---")
-            
+    
 col1, col2, col3, col4 = st.columns([2, 1, 1, 4])
 
-col1.write('**SELECIONADOS:**')
+col1.write('**Patients were assessed for eligibility:**')
 col2.info(f"{var_selecionados}")
 
 col1, col2, col3, col4 = st.columns([2, 1, 1,4])
